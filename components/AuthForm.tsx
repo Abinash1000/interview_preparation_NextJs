@@ -187,10 +187,10 @@ const AuthForm = ({ type }: { type: FormType }) => {
           </form>
         </Form>
         <p className="text-center">
-          {isSignIn ? "No account yet" : "Have an account already?"}
+          {isSignIn ? "No account yet? " : "Have an account already? "}
           <button
             onClick={() => handleNavigate(!isSignIn ? "/sign-in" : "/sign-up")}
-            className="font-bold text-user-primary ml-1 bg-transparent border-none cursor-pointer"
+            className="font-bold text-user-primary ml-1 bg-transparent border-none cursor-pointer underline"
             disabled={isNavigating}
           >
             {isSignIn ? "Sign up" : "Sign in"}

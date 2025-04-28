@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useActionState } from "react";
 import { useRouter } from "next/navigation";
 
 import { cn } from "@/lib/utils";
@@ -166,7 +166,7 @@ const Agent = ({
         <div className="card-border">
           <div className="card-content">
             <Image
-              src="https://avatar.iran.liara.run/public/boy"
+              src={`https://avatar.iran.liara.run/username?username=${[userName]}`}
               alt="profile-image"
               width={539}
               height={539}
