@@ -1,12 +1,20 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  eslint:{
+  eslint: {
     ignoreDuringBuilds: true,
   },
-  typescript:{
-    ignoreBuildErrors: true
-  }
+  typescript: {
+    ignoreBuildErrors: true,
+  },
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "avatar.iran.liara.run",
+      },
+    ],
+  },
 };
 
 export default nextConfig;

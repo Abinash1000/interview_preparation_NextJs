@@ -14,7 +14,7 @@ const Page = async ({ params }: RouteParams) => {
     if (!interview) redirect('/')
   return (
     <>
-    <div className="flex flex-row gap-4 justify-between">
+    <div className="flex flex-row gap-4 justify-between m-4">
         <div className="flex flex-row gap-4 items-center">
             <div className="flex flex-row gap-4">
                 <Image src={getRandomInterviewCover()} alt='cover-image' width={40} height={40} className='rounded-full object-cover size-[40px]'/>

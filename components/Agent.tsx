@@ -7,8 +7,7 @@ import { useRouter } from "next/navigation";
 import { cn } from "@/lib/utils";
 import { vapi } from "@/lib/vapi.sdk";
 import { interviewer } from "@/constants";
-import { createFeedback } from "@/lib/actions/general.actions"; // Update the path if the file is named 'general.ts' or adjust to the correct file name and location
-
+import { createFeedback } from "@/lib/actions/general.actions";
 enum CallStatus {
   INACTIVE = "INACTIVE",
   CONNECTING = "CONNECTING",
@@ -167,7 +166,7 @@ const Agent = ({
         <div className="card-border">
           <div className="card-content">
             <Image
-              src="/user-avatar.png"
+              src="https://avatar.iran.liara.run/public/boy"
               alt="profile-image"
               width={539}
               height={539}
@@ -194,7 +193,7 @@ const Agent = ({
         </div>
       )}
 
-      <div className="w-full flex justify-center">
+      <div className="w-full flex justify-center mt-4">
         {callStatus !== "ACTIVE" ? (
           <button className="relative btn-call" onClick={() => handleCall()}>
             <span
@@ -207,7 +206,7 @@ const Agent = ({
             <span className="relative">
               {callStatus === "INACTIVE" || callStatus === "FINISHED"
                 ? "Call"
-                : ". . ."}
+                : "Connecting..."}
             </span>
           </button>
         ) : (

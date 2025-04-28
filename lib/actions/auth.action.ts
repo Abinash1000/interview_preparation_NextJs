@@ -57,6 +57,15 @@ export async function signIn(params: SignInParams) {
     }
     
 }
+
+export async function logout() {
+    const cookieStore = await cookies();
+    cookieStore.delete('session');
+    cookieStore.delete('firebase_token');
+    
+    return { success: true };
+  }
+  
 export async function setSessionCookies(idToken: string){
     const cookieStore = await cookies();
     const sessionCookie =  await auth.createSessionCookie(idToken, {
