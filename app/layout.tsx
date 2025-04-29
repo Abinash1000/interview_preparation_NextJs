@@ -8,7 +8,6 @@ const monaSans = Mona_Sans({
   subsets: ["latin"],
 });
 
-
 export const metadata: Metadata = {
   title: "Ai Interview Preparation",
   description: "An AI Interview Preparation Tool",
